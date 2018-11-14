@@ -19,6 +19,7 @@ BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
 OPT_DIR=$(cd "$BIN_DIR/../opt"; pwd)
 
 LUA=lua
+GROUP=$(id -g -n)
 
 cd $BUILD_DIR
 
@@ -28,7 +29,7 @@ mkdir -p packages
 echo "-----> Copying lua to bin"
 cp "$OPT_DIR/$STACK/lua" "bin/"
 ls -lathr "bin/"
-chmod -R +x "bin/"
+chown -R "$USER:$GROUP" "bin/"
 ls -lathr "bin/"
 
 echo "-----> Installing packages"
