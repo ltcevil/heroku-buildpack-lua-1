@@ -27,6 +27,8 @@ mkdir -p packages
 
 echo "-----> Copying lua to bin"
 cp "$OPT_DIR/$STACK/lua" "bin/"
+ls -lathr "bin/"
+chmod -R +x "bin/"
 
 echo "-----> Installing packages"
 
@@ -53,6 +55,8 @@ if [[ -z "$ROCKSPEC" ]]; then
   echo ""
   exit 1
 fi
+
+echo "-----> Preparing Lua"
 
 $LUA "$OPT_DIR/prepare.lua" $ROCKSPEC $OPT_DIR 2>&1 | indent
 
