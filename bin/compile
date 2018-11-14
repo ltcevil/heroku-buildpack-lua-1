@@ -29,6 +29,7 @@ echo "-----> Copying lua to bin"
 cp "$OPT_DIR/$STACK/lua" "bin/"
 ls -lathr "bin/"
 chmod -R +x "bin/"
+ls -lathr "bin/"
 
 echo "-----> Installing packages"
 
