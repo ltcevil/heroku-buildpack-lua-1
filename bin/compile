@@ -29,7 +29,7 @@ mkdir -p packages
 echo "-----> Copying lua to bin"
 cp "$OPT_DIR/$STACK/lua" "bin/"
 ls -lathr "bin/"
-chown -R "$USER:$GROUP" "bin/"
+chown -R "$USER:$GROUP" "bin/lua"
 ls -lathr "bin/"
 
 echo "-----> Installing packages"
