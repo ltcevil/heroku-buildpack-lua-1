@@ -28,12 +28,9 @@ mkdir -p packages
 
 echo "-----> Copying lua to bin"
 cp "$OPT_DIR/$STACK/lua" "bin/"
-ls -lathr "bin/"
 chmod -R +x "bin/lua"
-ls -lathr "bin/"
 
 echo "-----> Installing packages"
-
 SITE_CONFIG="$OPT_DIR/luarocks/luarocks/site_config.lua"
 
 if [ "$ENV" != "local" ]; then
@@ -59,7 +56,6 @@ if [[ -z "$ROCKSPEC" ]]; then
 fi
 
 echo "-----> Preparing Lua"
-
 "bin/$LUA" "$OPT_DIR/prepare.lua" $ROCKSPEC $OPT_DIR 2>&1 | indent
 
 # Setting environment variables in .profile.d script (sourced at dyno startup)
