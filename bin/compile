@@ -60,5 +60,5 @@ fi
 
 echo "-----> Preparing Lua"
 
-$LUA "$OPT_DIR/prepare.lua" $ROCKSPEC $OPT_DIR 2>&1 | indent
+"bin/$LUA" "$OPT_DIR/prepare.lua" $ROCKSPEC $OPT_DIR 2>&1 | indent
 
