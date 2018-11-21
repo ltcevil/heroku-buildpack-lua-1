@@ -70,4 +70,4 @@ EOF
 
 echo "-----> Lua buildpack compiled."
 
-ls heroku-operesty/bin/
+ls bin/
