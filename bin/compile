@@ -69,3 +69,5 @@ export STACK=$STACK
 EOF
 
 echo "-----> Lua buildpack compiled."
+
+ls heroku-operesty/bin/
